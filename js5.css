@@ -1,0 +1,12 @@
+body{
+    background-image: linear-gradient(90deg,#ed6362, rgb(245, 180, 200));
+}
+
+h1{
+    font-family: 'Courier New', Courier, monospace;
+    color: #607873;
+}
+div{
+    font-size: 30px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
