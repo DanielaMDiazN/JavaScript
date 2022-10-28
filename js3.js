@@ -1,13 +1,38 @@
-var num;
+numero = Number(prompt("Ingresa la cantidad de números a mostrar:"))
 
-num = prompt("¿Cuantos numeros perfectos ocupas?")
+document.write("Ingrese los números a mostrar: ",numero)
 
-for( var i = 1; i <= 1000; i++){
-    b=0;
-    for (var j = 1; j <= Math.floor(i/2); j++){
-        b = b + parseInt(j);
+encontrado = 0;
+for(i = 1; encontrado <= numero-1; i++){
+    if(i % 2 == 0){
+        for((j = (i / 2));(j >= 1); j--){
+            if(i % j == 0){
+                auxEntero = auxEntero + j;
+            }
+        }
+        if(auxEntero == i){
+            document.write("<br/> El resultado de numero perfecto es: ",auxEntero);
+            encontrado++
+            }
     }
-    if( b== i)
-    console.log("El numero es perfecto\n",i);
-
+    auxEntero = 0;
 }
+
+
+
+let hora_inicial = Number(prompt("Ingresa la hora:"));
+let frecuencia = Number(prompt("Ingresa la frecuencia:"));
+
+let cant_tomas = 24 / frecuencia;
+
+console.log("Horarios");
+
+let horario = hora_inicial;
+
+for (let i = 1;i <= cant_tomas; i++) {
+    console.log(`Toma: ` + i + " < " + (horario) + ":00 hrs>");
+    horario = horario + frecuencia;
+    if (horario >= 24) {
+        horario = horario - 24;
+    };
+};
